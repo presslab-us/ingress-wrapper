@@ -1,9 +1,9 @@
 {
-  "name": "Ingress Nginx Proxy",
+  "name": "Ingress Wrapper",
   "version": "dev",
-  "slug": "ingress_nginx_proxy",
+  "slug": "ingress_wrapper",
   "description": "Proxy That uses Home Assistant Ingress and Nginx to map any local port",
-  "url": "https://github.com/hassio-addons/addon-node-red",
+  "url": "https://github.com/marciogranzotto/ingress-wrapper",
   "ingress": true,
   "ingress_port": 0,
   "panel_icon": "mdi:sitemap",

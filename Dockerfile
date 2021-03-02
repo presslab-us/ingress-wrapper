@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:8.0.1
+ARG BUILD_FROM=hassioaddons/base:9.1.5
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -41,16 +41,16 @@ ARG BUILD_VERSION
 
 # Labels
 LABEL \
-    io.hass.name="Ingress Nginx Proxy" \
+    io.hass.name="Ingress Wrapper" \
     io.hass.description="Proxy That uses Home Assistant Ingress and Nginx to map any local port" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    org.opencontainers.image.title="Ingress Nginx Proxy" \
+    org.opencontainers.image.title="Ingress Wrapper" \
     org.opencontainers.image.description="Proxy That uses Home Assistant Ingress and Nginx to map any local port" \
     org.opencontainers.image.licenses="Apache-2.0" \
-    org.opencontainers.image.url="https://github.com/hassio-addons/addon-node-red" \
-    org.opencontainers.image.source="https://github.com/hassio-addons/addon-node-red" \
+    org.opencontainers.image.url="https://github.com/marciogranzotto/ingress-wrapper" \
+    org.opencontainers.image.source="https://github.com/marciogranzotto/ingress-wrapper" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
