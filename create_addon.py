@@ -1,5 +1,6 @@
 
 import json
+import os
 
 def sanitised_input(prompt, type_=None, min_=None, max_=None, range_=None):
     if min_ is not None and max_ is not None and max_ < min_:
