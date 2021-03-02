@@ -39,6 +39,8 @@ def sanitised_input(prompt, type_=None, min_=None, max_=None, range_=None):
 name = sanitised_input("Enter the desired add-on name: ", str)
 slug = sanitised_input("Enter the slug: ", str.lower)
 panel_icon = sanitised_input("Enter side pannel icon (like mdi:car): ", str.lower)
+panel_admin_str = sanitised_input("Only show at panel for admins? (true/false): ", str.lower, range_=('true', 'false'))
+panel_admin = panel_admin_str == "true"
 
 
 filename = 'config-sample.json'
@@ -51,6 +53,7 @@ with open(filename, 'r') as f:
     data['name'] = name
     data['slug'] = slug
     data['panel_icon'] = panel_icon
+    data['panel_admin'] = panel_admin
     print(data)
 
 filename = 'config.json'

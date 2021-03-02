@@ -18,8 +18,6 @@
   "homeassistant_api": true,
   "host_network": true,
   "auth_api": true,
-  "auto_uart": true,
-  "gpio": true,
   "privileged": ["SYS_RAWIO"],
   "devices": ["/dev/mem:/dev/mem:rwm"],
   "apparmor": false,
