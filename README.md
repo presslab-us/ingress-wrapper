@@ -1,6 +1,6 @@
 # Home Assistant Add-on: Ingress Wrapper
 
-Proxy That uses Home Assistant Ingress and Nginx to map any local port
+Proxy That uses Home Assistant Ingress and Nginx to map any local address
 
 Supports websockets.
 
