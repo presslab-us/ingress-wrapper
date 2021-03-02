@@ -1,7 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: Node-RED
-# Configures NGINX for use with Node-RED
+# Configures NGINX proxy
 # ==============================================================================
 declare admin_port
 declare certfile
