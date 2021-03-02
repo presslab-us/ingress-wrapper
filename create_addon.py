@@ -40,7 +40,7 @@ slug = sanitised_input("Enter the slug: ", str.lower)
 panel_icon = sanitised_input("Enter side pannel icon (like mdi:car): ", str.lower)
 
 
-filename = 'config.json'
+filename = 'config-sample.json'
 with open(filename, 'r') as f:
     print("\n\nReading config.json...")
     data = json.load(f)
@@ -52,6 +52,7 @@ with open(filename, 'r') as f:
     data['panel_icon'] = panel_icon
     print(data)
 
+filename = 'config.json'
 os.remove(filename)
 with open(filename, 'w') as f:
     print("\n\Saving config.json...")

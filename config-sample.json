@@ -25,11 +25,11 @@
   "apparmor": false,
   "map": ["config:rw", "share:rw", "ssl"],
   "options": {
-    "port": "",
-    "path": ""
+    "host": "192.168.1.1",
+    "port": "80"
   },
   "schema": {
-    "port": "str",
-    "path": "str"
+    "host": "str",
+    "port": "str"
   }
 }
