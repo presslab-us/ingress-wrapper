@@ -10,19 +10,19 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        g++=9.3.0-r2 \
-        gcc=9.3.0-r2 \
-        libc-dev=0.7.2-r3 \
-        linux-headers=5.4.5-r1 \
-        make=4.3-r0\
+        g++ \
+        gcc \
+        libc-dev \
+        linux-headers \
+        make\
     \
     && apk add --no-cache \
-        git=2.26.2-r0 \
-        lua-resty-http=0.15-r0 \
-        nginx-mod-http-lua=1.18.0-r0 \
-        nginx=1.18.0-r0  \
-        openssh-client=8.3_p1-r0 \
-        patch=2.7.6-r6 \
+        git \
+        lua-resty-http \
+        nginx-mod-http-lua \
+        nginx \
+        openssh-client \
+        patch \
     \
     && apk del --no-cache --purge .build-dependencies \
     && rm -fr \
