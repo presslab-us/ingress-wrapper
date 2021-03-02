@@ -53,7 +53,8 @@ with open(filename, 'r') as f:
     print(data)
 
 filename = 'config.json'
-os.remove(filename)
+with contextlib.suppress(FileNotFoundError):
+    os.remove(filename)
 with open(filename, 'w') as f:
     print("\n\Saving config.json...")
     json.dump(data, f, indent=4)
