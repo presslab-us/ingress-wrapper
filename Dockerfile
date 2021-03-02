@@ -1,6 +1,5 @@
-ARG BUILD_FROM=hassioaddons/base:9.1.5
-# hadolint ignore=DL3006
-FROM ${BUILD_FROM}
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 # Set workdir
 WORKDIR /opt
