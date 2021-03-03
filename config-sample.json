@@ -6,6 +6,7 @@
   "url": "https://github.com/marciogranzotto/ingress-wrapper",
   "ingress": true,
   "ingress_port": 0,
+  "ingress_entry": "ingress_wrapper",
   "panel_icon": "mdi:sitemap",
   "startup": "application",
   "panel_admin": false,

@@ -52,6 +52,7 @@ with open(filename, 'r') as f:
     print("\n\Editting config.json...")
     data['name'] = name
     data['slug'] = slug
+    data['ingress_entry'] = slug
     data['panel_icon'] = panel_icon
     data['panel_admin'] = panel_admin
     print(data)
