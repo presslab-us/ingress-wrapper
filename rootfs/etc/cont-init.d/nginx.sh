@@ -11,6 +11,7 @@ declare keyfile
 
 ingress_port=$(bashio::addon.ingress_port)
 ingress_interface=$(bashio::addon.ip_address)
+ingress_entry=$(bashio::addon.ingress_entry)
 sed -i "s/%%port%%/${ingress_port}/g" /etc/nginx/servers/ingress.conf
 sed -i "s/%%interface%%/${ingress_interface}/g" /etc/nginx/servers/ingress.conf
 
@@ -22,3 +23,4 @@ config_host=$(bashio::config 'host')
 escaped_config_host=$(printf '%s\n' "$config_host" | sed -e 's/[\/&]/\\&/g')
 sed -i "s/%%config_port%%/${config_port}/g" /etc/nginx/includes/upstream.conf
 sed -i "s/%%config_host%%/${escaped_config_host}/g" /etc/nginx/includes/upstream.conf
+sed -i "s#%%ingress_entry%%#${ingress_entry}#g" /etc/nginx/servers/ingress.conf
