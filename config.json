@@ -1,0 +1,34 @@
+{
+  "name": "Squeezebox",
+  "version": "dev",
+  "slug": "squeezebox_material_ingress",
+  "description": "Reverse proxy for Squeezebox server with Material skin",
+  "url": "https://github.com/marciogranzotto/ingress-wrapper",
+  "ingress": true,
+  "ingress_port": 0,
+  "ingress_entry": "squeezebox/",
+  "panel_icon": "mdi:music",
+  "startup": "application",
+  "panel_admin": false,
+  "init": false,
+  "homeassistant": "0.92.0b2",
+  "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
+  "boot": "auto",
+  "hassio_api": true,
+  "hassio_role": "manager",
+  "homeassistant_api": true,
+  "host_network": true,
+  "auth_api": true,
+  "privileged": ["SYS_RAWIO"],
+  "devices": ["/dev/mem:/dev/mem:rwm"],
+  "apparmor": false,
+  "map": ["config:rw", "share:rw", "ssl"],
+  "options": {
+    "host": "hostname",
+    "port": "9000"
+  },
+  "schema": {
+    "host": "str",
+    "port": "str"
+  }
+}
