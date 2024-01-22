@@ -24,3 +24,6 @@ escaped_config_host=$(printf '%s\n' "$config_host" | sed -e 's/[\/&]/\\&/g')
 sed -i "s/%%config_port%%/${config_port}/g" /etc/nginx/includes/upstream.conf
 sed -i "s/%%config_host%%/${escaped_config_host}/g" /etc/nginx/includes/upstream.conf
 sed -i "s#%%ingress_entry%%#${ingress_entry}#g" /etc/nginx/servers/ingress.conf
+
+echo "Starting NGINX..."
+exec nginx
