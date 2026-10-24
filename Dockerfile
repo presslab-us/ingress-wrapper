@@ -1,5 +1,5 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM homeassistant/aarch64-base:3.18 AS aarch64
+FROM homeassistant/amd64-base:3.18 AS amd64
 
 # Set workdir
 WORKDIR /opt
